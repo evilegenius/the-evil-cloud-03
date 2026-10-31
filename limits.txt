@@ -1,0 +1,5 @@
+vmess-1|node-seedvmess30|0|0
+vmess-2|node-seedvmess31|0|0
+vmess-3|node-seedvmess32|0|0
+vmess-4|node-seedvmess33|0|0
+vmess-5|node-seedvmess34|0|0

@@ -1,0 +1,157 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "api": {
+    "tag": "api",
+    "services": [
+      "HandlerService"
+    ]
+  },
+  "stats": {},
+  "policy": {
+    "levels": {
+      "0": {
+        "statsUserUplink": true,
+        "statsUserDownlink": true,
+        "statsUserOnline": true
+      }
+    },
+    "system": {
+      "statsInboundUplink": true,
+      "statsInboundDownlink": true
+    }
+  },
+  "inbounds": [
+    {
+      "tag": "vmess-1",
+      "listen": "127.0.0.1",
+      "port": 10001,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "🎭🧊☠",
+            "email": "node-seedvmess30"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/🦋🐉"
+        }
+      }
+    },
+    {
+      "tag": "vmess-2",
+      "listen": "127.0.0.1",
+      "port": 10002,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "🐉🧿🌵",
+            "email": "node-seedvmess31"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/🐺🦋🐉"
+        }
+      }
+    },
+    {
+      "tag": "vmess-3",
+      "listen": "127.0.0.1",
+      "port": 10003,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "🧿🌵🐢",
+            "email": "node-seedvmess32"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/🦂🐺🦋🐉"
+        }
+      }
+    },
+    {
+      "tag": "vmess-4",
+      "listen": "127.0.0.1",
+      "port": 10004,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "🙃😘⚡",
+            "email": "node-seedvmess33"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/⚡🦂"
+        }
+      }
+    },
+    {
+      "tag": "vmess-5",
+      "listen": "127.0.0.1",
+      "port": 10005,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "🙁🐉🧿",
+            "email": "node-seedvmess34"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/🐙⚡🦂"
+        }
+      }
+    },
+    {
+      "tag": "api",
+      "listen": "127.0.0.1",
+      "port": 10085,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "tag": "blackhole"
+    }
+  ],
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api"
+      }
+    ]
+  }
+}
